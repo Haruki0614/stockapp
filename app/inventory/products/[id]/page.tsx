@@ -21,7 +21,7 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import productsData from "../sample/dummy_products.json";
 import inventoriesData from "../sample/dummy_inventories.json";
-import axios from "axios";
+import axios from "../../../../plugins/axios";
 
 type ProductData = {
     id: number;
