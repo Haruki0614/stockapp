@@ -30,7 +30,7 @@ import productsData from "./sample/dummy_products.json";
 import Link from "next/link";
 import { gridResizingColumnFieldSelector } from "@mui/x-data-grid";
 import { RemoveFromQueue } from "@mui/icons-material";
-import axios from "axios";
+import axios from "../../../plugins/axios";
 
 type ProductData = {
     id: number | null;
@@ -64,7 +64,7 @@ export default function Page() {
     };
 
     useEffect(() => {
-        axios.get("/api/inventory/products/")
+        axios.get(`/api/inventory/products/`)
             .then((res) => res.data)
             .then((data) => {
                 setData(data)
