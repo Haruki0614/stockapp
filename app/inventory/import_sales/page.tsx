@@ -109,6 +109,12 @@ export default function Page() {
                 <MuiFileInput value={fileSync} onChange={onChangeFileSync} />
                 <Button variant="contained" onClick={doAddSync}>登録</Button>
             </Box>
+            
+            <Box m={2}>
+                <Typography variant="subtitle1">非同期でファイル取込</Typography>
+                <MuiFileInput value={fileAsync} onChange={onChangeFileAsync} />
+                <Button variant="contained" onClick={doAddAsync}>登録</Button>
+            </Box>
             <Box m={2}>
                 <Typography variant="subtitle1">年月ごとの売上数集計</Typography>
                 <TableContainer component={Paper}>
@@ -129,11 +135,6 @@ export default function Page() {
                         </TableBody>
                     </Table>
                 </TableContainer>
-            </Box>
-            <Box m={2}>
-                <Typography variant="subtitle1">非同期でファイル取込</Typography>
-                <MuiFileInput value={fileAsync} onChange={onChangeFileAsync} />
-                <Button variant="contained" onClick={doAddAsync}>登録</Button>
             </Box>
         </Box>
     )
